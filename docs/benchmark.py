@@ -17,7 +17,7 @@ def generate_dummy_code_pybind11(nclasses=10):
     decl += "\n"
 
     for cl in range(nclasses):
-        decl += f"class {cl:03} {{\n"
+        decl += f"class cl{cl:03} {{\n"
         decl += "public:\n"
         bindings += f'    py::class_<cl{cl:03}>(m, "cl{cl:03}")\n'
         for fn in range(nfns):
